@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    reveal-docker:
+        ports:
+            - 8000:8000
+#        build: .
+        image: shomaigu/docker-reveal.js
+        container_name: 'reveal-docker'
+        volumes:
+            - ./md:/etc/reveal/md/
+        tty: true
